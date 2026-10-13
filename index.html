@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A little corner of the internet for photographs that make you feel something."
+    />
+    <meta name="theme-color" content="#f6f5f1" />
+    <title>Photo Gallery — Photography, thoughtfully collected</title>
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="wordmark" href="#home" aria-label="Photo Gallery home">
+        <span>Photo Gallery<span class="wordmark-period">.</span></span>
+      </a>
+
+      <div class="header-navigation">
+        <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+          <a class="nav-link is-active" href="#home">Home</a>
+          <a class="nav-link" href="#gallery" data-nav-filter="All">Gallery</a>
+          <a class="nav-link" href="#about">About Me</a>
+          <a class="nav-link" href="#awards">Awards</a>
+        </nav>
+        <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="main-nav">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="home" aria-labelledby="hero-title">
+        <header class="showcase-heading">
+          <span class="eyebrow"><span class="eyebrow-dot"></span> AWARD WINNING PHOTOGRAPHY</span>
+          <h1 id="hero-title">Ethan <em>Steel</em></h1>
+        </header>
+
+        <div class="showcase-grid" aria-label="Featured photography">
+          <figure class="showcase-tile showcase-plant">
+            <img
+              src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=800&q=85"
+              alt="Sunlight filtering through lush tropical leaves"
+              fetchpriority="high"
+            />
+            <figcaption class="showcase-image-caption"><span>01</span> Botanical study</figcaption>
+          </figure>
+          <figure class="showcase-tile showcase-bridge">
+            <img
+              src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=800&q=85"
+              alt="Golden Gate Bridge rising through the San Francisco haze"
+              loading="lazy"
+            />
+            <figcaption class="showcase-image-caption"><span>02</span> San Francisco, CA</figcaption>
+          </figure>
+          <figure class="showcase-tile showcase-cathedral">
+            <img
+              src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1400&q=90"
+              alt="Sculptural architecture framed against a clear sky"
+              fetchpriority="high"
+            />
+            <figcaption class="showcase-glass-caption">
+              <span class="showcase-caption-kicker">SELECTED WORK · 2025</span>
+              <span class="showcase-caption-title">Moments in Focus</span>
+              <span class="showcase-caption-description">Finding stillness in the shape of a city.</span>
+              <button class="showcase-fullscreen" id="showcase-fullscreen" type="button" aria-label="View Moments in Focus fullscreen">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M8 4H4v4m0-4 6 6m6-6h4v4m0-4-6 6M4 16v4h4m-4 0 6-6m10 2v4h-4m4 0-6-6" />
+                </svg>
+              </button>
+            </figcaption>
+          </figure>
+          <figure class="showcase-tile showcase-blossom">
+            <img
+              src="https://images.unsplash.com/photo-1522383225653-ed111181a951?auto=format&fit=crop&w=800&q=85"
+              alt="Soft pink cherry blossoms in the spring light"
+              loading="lazy"
+            />
+            <figcaption class="showcase-image-caption"><span>03</span> Spring in bloom</figcaption>
+          </figure>
+          <figure class="showcase-tile showcase-bus">
+            <img
+              src="https://images.unsplash.com/photo-1570125909232-eb263c188f7e?auto=format&fit=crop&w=800&q=85"
+              alt="A red double-decker bus moving through a city street"
+              loading="lazy"
+            />
+            <figcaption class="showcase-image-caption"><span>04</span> City in motion</figcaption>
+          </figure>
+          <figure class="showcase-tile showcase-taxi">
+            <img
+              src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=800&q=85"
+              alt="A taxi crossing a busy city avenue at dusk"
+              loading="lazy"
+            />
+            <figcaption class="showcase-image-caption"><span>05</span> After the rain</figcaption>
+          </figure>
+          <figure class="showcase-tile showcase-desert">
+            <img
+              src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?auto=format&fit=crop&w=800&q=85"
+              alt="Warm evening light falling across desert sand dunes"
+              loading="lazy"
+            />
+            <figcaption class="showcase-image-caption"><span>06</span> The quiet horizon</figcaption>
+          </figure>
+        </div>
+        <a class="showcase-scroll" href="#gallery"><span class="showcase-scroll-line"></span> EXPLORE THE COLLECTION <span aria-hidden="true">↓</span></a>
+      </section>
+
+      <section class="gallery-section" id="gallery" aria-labelledby="gallery-title">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow section-eyebrow">A CURATED PHOTO JOURNAL <span>—</span> VOL. 01</span>
+            <h2 id="gallery-title">My <em>LookBook</em></h2>
+          </div>
+          <p class="section-intro">
+            Browse our lookbook to discover captivating photography that brings creativity and inspiration to life.
+          </p>
+        </div>
+
+        <div class="gallery-toolbar">
+          <div class="filter-list" role="group" aria-label="Filter photos by category">
+            <button class="filter-button is-selected" type="button" data-filter="All" aria-pressed="true">All</button>
+            <button class="filter-button" type="button" data-filter="Nature and Wildlife" aria-pressed="false">Nature and Wildlife</button>
+            <button class="filter-button" type="button" data-filter="Portrait" aria-pressed="false">Portrait</button>
+            <button class="filter-button" type="button" data-filter="Fashion" aria-pressed="false">Fashion</button>
+            <button class="filter-button" type="button" data-filter="Travel" aria-pressed="false">Travel</button>
+          </div>
+        </div>
+
+        <div class="results-line" aria-live="polite">
+          <span id="results-count">12 photographs</span>
+          <div class="results-actions">
+            <label class="search-field">
+              <svg viewBox="0 0 20 20" aria-hidden="true">
+                <circle cx="8.8" cy="8.8" r="5.8" />
+                <path d="m13.2 13.2 4 4" />
+              </svg>
+              <input id="gallery-search" type="search" placeholder="Find a feeling..." autocomplete="off" aria-label="Search photographs" />
+            </label>
+            <label class="sort-field">
+              <span class="sr-only">Sort photographs</span>
+              <select id="gallery-sort" aria-label="Sort photographs">
+                <option value="curated">Curated</option>
+                <option value="newest">Newest</option>
+                <option value="az">A to Z</option>
+              </select>
+              <svg viewBox="0 0 20 20" aria-hidden="true">
+                <path d="m6 8 4 4 4-4" />
+              </svg>
+            </label>
+            <button class="favorites-toggle" id="favorites-toggle" type="button" aria-pressed="false">
+              <svg viewBox="0 0 20 20" aria-hidden="true">
+                <path d="M10 17s-7-4.3-7-9.2A3.8 3.8 0 0 1 10 5.5a3.8 3.8 0 0 1 7 2.3C17 12.7 10 17 10 17Z" />
+              </svg>
+              <span>Saved</span>
+              <span class="saved-count" id="saved-count">0</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="gallery-grid" id="gallery-grid" aria-live="polite"></div>
+        <div class="empty-state" id="empty-state" hidden>
+          <span class="empty-icon" aria-hidden="true">✳</span>
+          <h3>No frames found just yet.</h3>
+          <p>Try a different search or wander through another collection.</p>
+          <button class="text-button" id="clear-filters" type="button">Clear filters <span aria-hidden="true">↗</span></button>
+        </div>
+        <div class="load-more-wrap">
+          <button class="load-more-button" id="load-more" type="button">
+            <span>There’s more to see</span>
+            <span class="load-more-arrow" aria-hidden="true">↓</span>
+          </button>
+        </div>
+      </section>
+
+      <section class="closing-note" id="about" aria-labelledby="closing-title">
+        <span class="closing-spark" aria-hidden="true">✳</span>
+        <span class="eyebrow">A LITTLE ABOUT ME</span>
+        <h2 id="closing-title">The best things don’t ask<br />to be <em>rushed.</em></h2>
+        <p>I’m a photographer drawn to quiet places, honest moments, and the details we almost miss.</p>
+        <a class="closing-link" href="#awards">A few kind nods along the way <span aria-hidden="true">↓</span></a>
+      </section>
+
+      <section class="awards-section" id="awards" aria-labelledby="awards-title">
+        <div class="awards-heading">
+          <span class="eyebrow">A FEW KIND NODS</span>
+          <h2 id="awards-title">Honored to be <em>noticed.</em></h2>
+        </div>
+        <div class="awards-list">
+          <div class="award-item">
+            <span class="award-year">2024</span>
+            <span class="award-name">International Photography Awards</span>
+            <span class="award-category">Nature · Official Selection</span>
+          </div>
+          <div class="award-item">
+            <span class="award-year">2023</span>
+            <span class="award-name">The Independent Photographer</span>
+            <span class="award-category">Emerging Talent · Finalist</span>
+          </div>
+          <div class="award-item">
+            <span class="award-year">2022</span>
+            <span class="award-name">Analog Sparks</span>
+            <span class="award-category">Fine Art · Honorable Mention</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="wordmark footer-wordmark" href="#home" aria-label="Photo Gallery home">
+        <span>Photo Gallery<span class="wordmark-period">.</span></span>
+      </a>
+      <span class="footer-note">Made for the art of looking closer.</span>
+      <span class="footer-copyright">© 2025 PHOTO GALLERY</span>
+    </footer>
+
+    <dialog class="lightbox" id="lightbox" aria-label="Photo viewer">
+      <button class="lightbox-close" id="lightbox-close" type="button" aria-label="Close photo viewer">×</button>
+      <button class="lightbox-arrow lightbox-previous" id="lightbox-previous" type="button" aria-label="Previous photograph">←</button>
+      <figure class="lightbox-figure">
+        <div class="lightbox-image-viewport">
+          <img id="lightbox-image" src="" alt="" />
+        </div>
+        <figcaption class="lightbox-caption">
+          <span class="lightbox-category" id="lightbox-category"></span>
+          <span class="lightbox-title" id="lightbox-title"></span>
+          <span class="lightbox-location" id="lightbox-location"></span>
+        </figcaption>
+      </figure>
+      <button class="lightbox-arrow lightbox-next" id="lightbox-next" type="button" aria-label="Next photograph">→</button>
+      <span class="lightbox-counter" id="lightbox-counter"></span>
+      <div class="lightbox-zoom" role="group" aria-label="Image zoom controls">
+        <button id="lightbox-zoom-out" type="button" aria-label="Zoom out">−</button>
+        <span id="lightbox-zoom-level" aria-live="polite">100%</span>
+        <button id="lightbox-zoom-in" type="button" aria-label="Zoom in">+</button>
+        <button id="lightbox-zoom-reset" type="button" aria-label="Reset zoom">Reset</button>
+      </div>
+    </dialog>
+  </body>
+</html>
